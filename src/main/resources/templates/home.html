@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <title>Basic Calculator</title>
+</head>
+<body>
+<main>
+    <div class="px-4 py-5 my-5 text-center">
+        <img class="d-block mx-auto mb-4" src="/imgs/calculator.svg" alt="" height="120">
+        <h1 class="display-5 fw-bold">Basic Calculator</h1>
+        <div class="col-lg-6 mx-auto">
+            <form action="/" method="post">
+                <div class="row mb-3">
+                    <div class="col">
+                        <input type="number" class="form-control" name="firstOperand" placeholder="First operand">
+                    </div>
+                    <div class="col">
+                        <input type="number" class="form-control" name="secondOperand" placeholder="Second operand">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        <select class="form-select" name="operator" aria-label="Default select example">
+                            <option value="+">+</option>
+                            <option value="-">-</option>
+                            <option value="*">*</option>
+                            <option value="/">/</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                            <button type="submit" class="btn btn-success btn-lg px-4 gap-3">Enter</button>
+                            <button type="submit" class="btn btn-secondary btn-lg px-4 gap-3">Reset</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-5">
+                    <div class="col">
+                        <label class="form-control form-control-lg" th:text="${result}">Answer</label>
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+</body>
+</html>
